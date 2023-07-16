@@ -20,7 +20,7 @@ def index():
 
 @app.route("/push_sample")
 def push_sample():
-    """プッシュメッセージを送る"""
+    """プッシュメッセージを送る→/push_sampleをURLの後につけると"Hello World!が出る！"""
     user_id = os.environ["USER_ID"]
     line_bot_api.push_message(user_id, TextSendMessage(text="Hello World!"))
 
